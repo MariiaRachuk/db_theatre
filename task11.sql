@@ -1,4 +1,4 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 drop procedure if exists tickets$$ 
 create procedure tickets()

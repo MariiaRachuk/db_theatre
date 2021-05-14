@@ -1,4 +1,4 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 drop procedure if exists rankk$$ 
 create procedure rankk()
@@ -17,7 +17,9 @@ and Конкурс.Дата between b and e;
 end$$
 #call rank_period('2019.01.01', '2020.05.09');
 
-drop procedure if exists rank_getted$$ create procedure rank_getted(in t text) begin
+drop procedure if exists rank_getted$$ 
+create procedure rank_getted(in t text) 
+begin
 select Персонал.ПІБ, Конкурс.Звання from Персонал, Актор, Конкурс 
 where Конкурс.idАктор=Актор.idАктор and Актор.idПерсонал=Персонал.idПерсонал and Назва=t;
 end$$

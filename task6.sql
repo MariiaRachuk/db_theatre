@@ -1,9 +1,10 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 
 drop procedure if exists role$$ create procedure role(in t text) begin
 declare c, min,max int default 0;
-declare r, age, age1 int default 0; declare sex, tembr , height text default '';
+declare r, age, age1 int default 0; 
+declare sex, tembr , height text default '';
 select idРоль into r from Роль where Роль.Імя=t; 
 select Стать into sex from Роль where Роль.Імя=t;
 select Вік into age from Роль where Роль.Імя=t;

@@ -1,4 +1,4 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 
 drop procedure if exists performance_genre$$ 
@@ -40,5 +40,5 @@ select Назва, Премєра from Постановка
 where Постановка.Премєра between b and e;
 end$$
 
-#call first_performance('2016.01.01','2021.01.01'); 
+#call first_performance('2019.01.01','2021.06.06'); 
 #Task5---------------------------------------------------------

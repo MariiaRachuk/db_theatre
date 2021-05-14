@@ -1,4 +1,4 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 
 drop procedure if exists author$$ 
@@ -44,5 +44,5 @@ create procedure author_period( in b date, in e date) begin
 select DISTINCT Автор.Імя from Автор, Постановка, Вистави 
 where Постановка.idАвтор=Автор.idАвтор and Постановка.idПостановка=Вистави.idПостановка and Вистави.Дата between b and e;
 end$$
-call author_period('2000.05.07','2020.06.06'); 
+#call author_period('2000.05.07','2020.06.06'); 
 #Task4-----------------------------------------------------------

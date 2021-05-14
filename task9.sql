@@ -1,4 +1,4 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 drop procedure if exists performance_list$$ 
 create procedure performance_list(in t text) 

@@ -1,4 +1,4 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 drop procedure if exists money_for_performance$$ 
 create procedure money_for_performance(in t text) 

@@ -1,4 +1,4 @@
-use mydb; 
+use Treatre_db; 
 delimiter $$
 
 drop procedure if exists tour_coming$$
@@ -13,7 +13,7 @@ where Гастролі.idПерсонал=Персонал.idПерсонал an
 and Початок between b and e
 and Кінець between b and e;
 end$$
-#call tour_coming('2020-05-01', '2020-05-020');
+call tour_coming('2020-05-01', '2020-05-020');
 
 drop procedure if exists tour_outcoming$$
 create procedure tour_outcoming(in b date, in e date, in t text) 
@@ -26,5 +26,5 @@ where Гастролі.idПерсонал=Персонал.idПерсонал an
 and Гастролі.idПостановка=l and Початок between b and e
 and Кінець between b and e;
 end$$
-#call tour_outcoming('2020-05-01', '2020-05-020', 'Корсиканка'); 
+call tour_outcoming('2020-04-01', '2020-05-020', 'Мертві_Душі'); 
 #Task8----------------------------------------------------------------------
